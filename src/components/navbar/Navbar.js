@@ -1,33 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import './Navbar.css'
-import {HiHome} from 'react-icons/hi'
-import {FaBars} from 'react-icons/fa'
+import React from "react";
+import "./Navbar.css";
+import { HiHome } from "react-icons/hi";
+import { FaBars } from "react-icons/fa";
+import { data } from "../data/data";
 
 const Navbar = () => {
+  console.log(data);
 
-    const [showSub, setShowSub] = useState(false);
-    const showRef = 
+  return (
+    <div className="navbar__container">
+      <ul className="navbar__parent">
+        <li className="navbar__icon">
+          <HiHome />
+        </li>
+        {data.map((item,index) => {
+            const Sublist = item.SubList;
+            return(
+                <li className="navbar__item" key={index}>
+                <span className="navbar__title">{item.Name}</span>
+                <div className="sub__container">
+                  <ul className="sub__list">
+                    {
+                        Sublist.map((sub,index)=>{
+                            return(
+                                <li className="sub__item" key={index}>{sub}</li>
+                            )
+                        }) 
+                    }
+                  </ul>
+                </div>
+              </li>
+            )
+        })}
 
-    // useEffect(()=>{
-    //     const list__titles = document.querySelectorAll(".navbar__title");
-    //         list__titles.forEach(title=>{
-                
-    //             title.addEventListener("mouseover",(e)=>{
-    //                 console.log()
-    //             })
-    //         })
-    // })
-
-    return (
-       <div className='navbar__container'>
-            <ul className='navbar__parent'>
-                <li className='navbar__icon'><HiHome/></li>
-                <li className='navbar__title'>
-                    Thời sự
-                   
-                </li>
-                <li className='navbar__title'>Góc nhìn</li>
-                <li className='navbar__title'>Thế giới</li>
                 <li className='navbar__title'>Video</li>
                 <li className='navbar__title'>Podcasts</li>
                 <li className='navbar__title'>Kinh doanh</li>
@@ -40,13 +45,16 @@ const Navbar = () => {
                 <li className='navbar__title'>Đời sống</li>
                 <li className='navbar__title'>Du lịch</li>
                 <li className='navbar__title'>Số hóa</li>
+                <li className='navbar__title'>Xe</li>
                 <li className='navbar__title'>Ý kiến</li>
                 <li className='navbar__title'>Tâm sự</li>
-                <li className='navbar__title'>Hài</li>
-                <li className='navbar__all'>Tất cả <FaBars className='navbar__all__icon'/> </li>
-            </ul> 
-       </div>
-    );
+                <li className='navbar__title'>Hài</li> 
+        <li className="navbar__all">
+          Tất cả <FaBars className="navbar__all__icon" />{" "}
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default Navbar;
