@@ -1,0 +1,126 @@
+.body2__cotainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-top:2px solid var(--border-color) ;
+    padding: 20px 0;
+    
+}
+.body2__header__name{
+    margin-right: 20px;
+    font-size: 15px;
+    color: #222222;
+}
+
+.body2__header__name:hover{
+    color: var(--text-primary);
+}
+
+
+.body2__content{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns:2.5fr 1.2fr 1.5fr ;
+    gap: 40px;
+}
+
+.body2__content__left___title{
+    margin: 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.body2__content__mid{
+    position: relative;    
+}
+
+.body2__content__mid::after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: -20px;
+    background-color: var(--border-color);   
+}
+
+.body2__content__mid::before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 100%;
+    top: 0;
+    right:-20px;
+    background-color: var(--border-color);   
+}
+
+.body2__content__mid__item{
+    margin-bottom: 30px;
+}
+
+.body2__content__mid___title{
+    margin: 10px 0;
+    font-size: 16px;
+    color: #222222;
+    font-weight: 600;
+}
+
+.body2__content__right__item{
+    display: grid;
+    grid-template-columns: 2fr 1.3fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.body2__content__mid___title:hover{
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.body2__content__left___title:hover{
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.body2__content__right__item::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: -20px;
+    left: 0;
+    background-color: var(--border-color);
+
+
+}
+
+.body2__content__mid___title{
+    margin: 10px 0;
+    font-size: 16px;
+    color: #222222;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1120px) {
+    .body2__cotainer{
+        width: 97%;
+    }
+  }
+  
+  @media screen and (max-width: 980px) {
+    .body2__content{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns:1fr 1fr ;
+        gap: 40px;
+    }
+    .body2__content__right{
+        width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 580px) {
+   
+  }

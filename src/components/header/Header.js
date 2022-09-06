@@ -3,7 +3,7 @@ import logo from "../../asset/vne.png";
 import logo_inter from "../../asset/inter.png";
 import "./Header.css";
 import { HiOutlineClock,HiOutlineSearch } from "react-icons/hi";
-import { FaUserAlt} from "react-icons/fa";
+import { FaUserAlt,FaBars} from "react-icons/fa";
 
 
 const Header = () => {
@@ -11,6 +11,7 @@ const Header = () => {
         <div className="container">
             <div className="header__container">
                 <div className="header__right">
+                    <div className="header__right__icon"><FaBars size={22} style={{marginTop:"5px", marginRight:"20px",color:"#bdbdbd",cursor:"pointer"}}/></div>
                     <div className="header__logo">
                         <img src={logo} alt="" />{" "}
                     </div>

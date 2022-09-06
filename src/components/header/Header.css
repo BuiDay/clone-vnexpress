@@ -4,6 +4,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom:1px solid var(--border-color) ;
+    background: #FFF;
+    z-index: 10;
 }
 
 .header__right{
@@ -45,7 +48,7 @@ img{
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 50%;
+
 }
 
 .btn__header{
@@ -145,6 +148,10 @@ input{
     color: var(--text-color);
 }
 
+.header__right__icon{
+    display: none;
+}
+
 .header__userText{
     margin-left: 5px;
     font-size: 15px;
@@ -157,7 +164,37 @@ input{
 }
 
 
+  @media screen and (max-width: 1120px) {
+    .header__container{
+        position: fixed;
+        top:0;
+    }
+    .header__left{
+        padding-right: 30px;
+    }
+    .header__right__icon{
+        display: block;
+    }
+    .header__date{
+        display: none;
+    }
 
+    .header__logo::after {
+        display: none;
+    }
+  }
 
+  @media screen and (max-width: 980px) {
+    .header__search{
+        display: none;
+    }
+    
+  }
+
+  @media screen and (max-width: 600px) {
+    .header__left{
+        display: none;
+    }
+  }
 
 

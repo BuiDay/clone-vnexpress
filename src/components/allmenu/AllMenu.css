@@ -1,9 +1,13 @@
-.allmenu__main{
+.allmenu__main__container{
+    margin-top: 50px;
     position: fixed;
     width: 100%;
-    height: calc(100vh - 103px);
+    height: calc(100vh - 10px);
     background: #f7f7f7;
-    overflow: hidden;
+    z-index: 100;
+    transition-duration: 200ms;
+    transition-property: opacity , top , visible;
+    transition-timing-function: cubic-bezier(.7,1,.7,1);
 }
 
 .allmenu__container{
@@ -15,6 +19,7 @@
 .allmenu__top__title{
     font-size: 18px;
     font-weight: 600;
+    color: #4f4f4f;
 }
 
 .allmenu__top__close{
@@ -48,4 +53,59 @@
 .allmenu__main{
     height: 100%;
     width: 100%;
+    display: grid;
+    grid-template-columns: 8.5fr 1.5fr;
+    margin-top: 20px;
+}
+
+.allmenu__main__left{
+    scroll-behavior: smooth;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.allmenu__main__left::-webkit-scrollbar {
+    width: 5px;
+  }
+.allmenu__main__left::-webkit-scrollbar-thumb {
+    background: var(--border-color); 
+    border-radius: 10px;
+  }
+
+.allmenu__main__left__item{
+    width: 100%;
+    margin-bottom: 50px;
+    height: 155px;
+    overflow: hidden;
+}
+
+.allmenu__main__left__title{
+    font-size: 16px;
+    color:var(--text-purple);
+}
+
+.allmenu__main__left__title:hover{
+    text-decoration: underline;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.allmenu__main__left__list{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.allmenu__main__left__name{
+    font-size: 14px;
+    padding: 7px 0;
+}
+
+.allmenu__main__left__name:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.allmenu__main__right{
 }

@@ -45,7 +45,7 @@ const Body = () => {
                 <div className="body__right">
                     <div className="body__right__item">
                         <div className="body__right__title">
-                            <a href='#' className="body__right__name titleActive">Kinh doanh</a>
+                            <a href='#' className="titleActive">Kinh doanh</a>
                             <a href='#' className="body__right__name">Quốc tế</a>
                             <a href='#' className="body__right__name">Doanh nghiệp</a>
                             <a href='#' className="body__right__name">Chứng khoán</a>

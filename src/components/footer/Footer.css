@@ -260,3 +260,38 @@
     font-weight: 400;
     color: #222222;
 }
+
+@media screen and (max-width: 1120px) {
+    .footer__container{
+        width: 97%;
+    }
+
+    .footer__container__menu:nth-child(5)::before{
+        display: none;
+    }
+
+    .footer__container__menu:nth-child(5)::after{
+        display: none;
+    }
+
+  }
+  
+  @media screen and (max-width: 980px) {
+    .footer__container__top{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+    .footer__container__middle{
+        padding-top: 10px;
+        flex-direction: column;
+        height: 90px;
+    }
+    .footer__container__item{
+        margin-bottom:50px;
+    }
+  }
+  
+  @media screen and (max-width: 580px) {
+  
+    
+  }
