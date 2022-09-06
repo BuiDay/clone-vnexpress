@@ -75,27 +75,35 @@ const Body = () => {
                         </div>
                     </div>
 
-                    <div className="body__right__table">
-                        <table>
-                        <tbody>
-                            <tr>
-                                <th>Giá vàng</th>
-                                <th>Mua</th>
-                                <th>Bán</th>
-                            </tr>
-                            <tr>
-                                <td>Vàng SJC (triệu đồng/lượng)</td>
-                                <td>Maria Anders</td>
-                                <td>Germany</td>
-                            </tr>
-                            <tr>
-                                <td>Thế giới (USD/ounce)</td>
-                                <td>Francisco Chang</td>
-                                <td>Mexico</td>
-                            </tr>
-                        </tbody>
-                        </table>
-                    </div>
+                    <div className='body__right__box'>
+                        <div className="body__right__table">
+                            <table width={"100%"}>
+                            <tbody >
+                                <tr>
+                                    <th className='giavang'>Giá vàng</th>
+                                    <th className='mua'>Mua</th>
+                                    <th className='ban'>Bán</th>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Vàng SJC (triệu đồng/lượng)</td>
+                                    <td className='so'>66</td>
+                                    <td className='so'>66.5</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Thế giới (USD/ounce)</td>
+                                    <td className='so'>1.767</td>
+                                    <td className='so'>1.712</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <div className="body__right__logos">
+                            <div className="body__right__logo"><img src="https://s1.vnecdn.net/vnexpress/restruct/i/v646/banner/logo-startup.svg" alt="" /></div>
+                            <div className="body__right__logo"><img src="https://s1.vnecdn.net/vnexpress/restruct/i/v646/banner/logo-vhome.svg" alt="" /> </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>

@@ -1,6 +1,5 @@
 .body__container{
     margin-top: 20px;
-    height: 40vh;
     width: 100%;
     display: grid;
     grid-template-columns: 1.7fr 3fr;
@@ -129,7 +128,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 25px;
+    position: relative;
 }
+
+.body__right__content__bottom::after{
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--border-color);
+}
+    
 
 .body__right__content__bottom__title{
     font-size: 15px;
@@ -178,5 +189,54 @@ tr {
 td {
     display: table-cell;
     vertical-align: inherit;
+}
+
+.body__right__box{
+    margin-top: 20px;
+    width: 100%;
+}
+.body__right__table{
+    width: 80%;
+    position: relative;
+    float: left;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+table,th,td{
+    border: 1px solid var(--border-color);
+    border-collapse: collapse;
+}
+td{
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+.so{
+    text-align: right;
+}
+
+.giavang{
+    text-align: left;
+    padding: 7px 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ban,
+.mua{
+    text-align: right;
+    padding: 7px 8px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+
+.body__right__logos{
+    padding-top: 15px;
+    width: 15%;
+    position: relative;
+    float: right;
 }
 
